@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>soGehtDas-reinerTest</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="scrolling">
+    <div class="progress scrolling"></div>
+    <img src="resources/dschungel.jpg" class="background1 scrolling" />
+    <img src="resources/pexels-pixabay-315191.jpg" class="background2 scrolling" />
+
+
+    <div style="text-align: center; font-size: 1em;">
+        <h1>Eine Website via Github</h1>
+        <p>zur Erkundung</p>
+    </div>
+    <div>
+        Links:
+        <br />
+        <a href="https://www.w3schools.com/cssref/css_selectors.php">
+            CSS Stuff
+        </a>
+        <br />
+        <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">
+            Anleitung
+        </a>
+        <br />
+        <a
+            href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll">
+            Theme
+        </a>
+        <br />
+        <a
+            href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">
+            Github Actions
+        </a>
+        <br />
+        <br />
+        <a href="https://codepen.io/chriscoyier/pen/NWxpJVx">
+            inspirated CSS Scroll-Implementation </a>
+        <div>
+            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+
+        </div>
+    </div>
+
+    <div class="scrolling fadeout">
+        <img src="resources/chimpanzee-sitting-sad-mammal.jpg" class="apePosition apeRotate apeSize apeBreath" />
+    </div>
+    <div class="scrolling fadein">
+        <img src="resources/chimpanzee-sitting-sad-mammal2.jpg" class="apePosition apeRotate apeSize apeBreath" />
+
+    </div>
+
+
+</body>
+
+<script>
+    window.addEventListener('scroll', () => {
+        document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+    }, false);
+</script>
+
+</html>

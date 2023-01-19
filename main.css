@@ -1,0 +1,131 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 500vh;
+    background-color: #19634b;
+    color: #dbdd99;
+
+    animation: body 1s linear;
+}
+
+@keyframes body {
+    to {
+        background-color: rgb(19, 48, 97);
+    }
+}
+
+.progress {
+    height: 3px;
+    width: 0%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    animation: progress 1s linear;
+}
+
+@keyframes progress {
+    to {
+        background-color: rgb(20, 255, 226);
+        width: 100%;
+    }
+}
+
+.background1 {
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    opacity: 0.5;
+
+    animation: background1 1s linear;
+}
+
+@keyframes background1 {
+    to {
+        opacity: 0;
+    }
+}
+
+.background2 {
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    opacity: 0;
+
+    animation: background2 1s linear;
+}
+
+@keyframes background2 {
+    to {
+        opacity: 0.8;
+    }
+}
+
+
+.fadein {
+    opacity: 0;
+    animation: fadein 1s linear;
+}
+
+@keyframes fadein {
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeout {
+    opacity: 1;
+    animation: fadeout 1s linear;
+}
+
+@keyframes fadeout {
+    to {
+        opacity: 0;
+    }
+}
+
+.apePosition {
+    position: fixed;
+    right: 30%;
+    bottom: 10%;
+}
+
+.apeRotate {
+    rotate: 20deg;
+}
+
+.apeSize {
+    width: 20%;
+}
+
+.apeBreath {
+    animation: apeBreath 1s ease-in-out infinite alternate;
+    -webkit-animation: apeBreath 1s ease-in-out infinite alternate;
+}
+
+@keyframes apeBreath {
+    0% {
+        transform: scale(1.0);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.scrolling {} /* my marker for all animations with scrolleffect*/
+
+:root *.scrolling {
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
